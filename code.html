@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Filter Buttons</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #ffffff;
+            --hover-color: #4f46e5;
+            --shadow-color: rgba(99, 102, 241, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+        }
+
+        .filter-container {
+            width: calc(100% - 4rem);
+            max-width: 800px;
+            padding: 2.5rem;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .filter-container {
+                width: calc(100% - 3rem);
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filter-container {
+                width: calc(100% - 2rem);
+                padding: 1.5rem;
+                border-radius: 12px;
+            }
+        }
+
+        .filter-title {
+            text-align: center;
+            color: #334155;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .filter-title {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filter-title {
+                font-size: 1rem;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            gap: 0.75rem;
+            max-width: 100%;
+        }
+
+        .filter-buttons li {
+            margin: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .filter-buttons li:hover {
+            transform: translateY(-2px);
+        }
+
+        .filter-buttons button {
+            background: none;
+            border: none;
+            padding: 0.65rem 1.5rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+            border-radius: 9999px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            color: var(--primary-color);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            background-color: rgba(99, 102, 241, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .filter-buttons button {
+                padding: 0.6rem 1.25rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filter-buttons {
+                gap: 0.5rem;
+            }
+            .filter-buttons button {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        .filter-buttons button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+            border-radius: 9999px;
+        }
+
+        .filter-buttons button:hover {
+            color: white;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        .filter-buttons button:hover::before {
+            opacity: 1;
+        }
+
+        .filter-buttons button.active {
+            color: white;
+            background-color: var(--primary-color);
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        .filter-buttons button.active::before {
+            opacity: 1;
+        }
+
+        /* Download button styles */
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .download-btn:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .close-btn {
+            right: 20px;
+            left: auto;
+        }
+
+        /* Animation for active state */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 8px rgba(99, 102, 241, 0);
+            }
+            100% {
+                button-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+            }
+        }
+
+        .filter-buttons button:active {
+            animation: pulse 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter-container">
+        <h3 class="filter-title">Filter by Category</h3>
+        <ul class="filter-buttons">
+            <li><button class="active">All Items</button></li>
+            <li><button>Popular</button></li>
+            <li><button>New Arrivals</button></li>
+            <li><button>Best Sellers</button></li>
+            <li><button>Special Offers</button></li>
+            <li><button>Premium</button></li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelectorAll('.filter-buttons button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.filter-buttons button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistic Vision Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>KỶ NIỆM ĐẠI HỘI CHÁU NGOAN BÁC HỒ TOÀN QUỐC LẦN X - 2025</h1>
+            <p>Made by: Nguyễn Hồng Dương</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="filter-container">
+            <ul class="filter-buttons">
+                <li><button class="active" data-filter="all">All</button></li>
+                <li><button data-filter="linh">Lê Ngọc Bảo Linh</button></li>
+                <li><button data-filter="duong">Nguyễn Hồng Dương</button></li>
+                <li><button data-filter="khanh">Nguyễn Ngân Khánh</button></li>
+                <li><button data-filter="duyanh">Trịnh Ngọc Duy Anh</button></li>
+                <li><button data-filter="baongoc">Phạm Thị Bảo Ngọc</button></li>
+                <li><button data-filter="tungvan">Vũ Đỗ Tùng Vân</button></li>
+                <li><button data-filter="ngochan">Lê Ngọc Hân</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="artist-info">
+        <div class="container">
+            <!-- All Artists -->
+            <div class="artist-bio active" data-artist="all">
+                <div class="profile-container">
+                    <img src="all/avatar.jpg" alt="All Artists" class="profile-img">
+                    <div class="profile-text">
+                        <h2>ĐẠI HỘI CHÁU NGOAN BÁC HỒ TOÀN QUỐC LẦN X - 2025</h2>
+                        <p style="font-weight: bold;">Đại hội diễn ra trong 3 ngày 13-15/5/2025. Tỉnh Bình Phước có 7 đại diện tiêu biểu tham gia đại hội. </p>
+                        <p>Với chủ đề “Thiếu nhi Việt Nam vững bước tiến vào kỷ nguyên mới”. Các em là những bông hoa rực rỡ trong vườn hoa thi đua nghìn việc tốt, không chỉ nổi bật trong học tập, mà còn tỏa sáng qua các phong trào văn hóa, văn nghệ, thể thao, sáng tạo khoa học kỹ thuật, cũng như tích cực tham gia các hoạt động đội, tình nguyện vì cộng đồng.</p>
+                        <div class="stats">
+                            <span><strong>7</strong> Artists</span>
+                            <span><strong id="total-works">0</strong> Works</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-gallery" id="gallery-all"></div>
+            </div>
+            
+            <!-- LÊ NGỌC BẢO LINH -->
+            <div class="artist-bio" data-artist="linh">
+                <div class="profile-container">
+                    <img src="Linh/day22.jpg" alt="Lê Ngọc Bảo Linh" class="profile-img">
+                    <div class="profile-text">
+                        <h2>LÊ NGỌC BẢO LINH</h2>
+                        <p class="specialty" style="font-weight: bold;">Lớp 9/1, Liên đội TH-THCS Thanh Lương (thị xã Bình Long)</p>
+                        <p>Suốt 9 năm học, em luôn giữ vững danh hiệu học sinh xuất sắc, đặc biệt là môn tiếng Anh. Trong năm học 2024-2025, em xuất sắc giành giải Nhất kỳ thi chọn học sinh giỏi cấp tỉnh môn Tiếng Anh.</br>Trước đó, suốt 3 năm liền, Bảo Linh cũng giành giải Nhì cấp thị xã trong kỳ thi học sinh giỏi tiếng Anh. Không dừng lại ở đó, cô học trò nhỏ tiếp tục tạo dấu ấn mạnh mẽ khi trở thành thủ khoa đầu vào lớp chuyên Anh Trường THPT chuyên Quang Trung (TP. Đồng Xoài) với 43,75 điểm - kết quả mơ ước của nhiều học sinh. </br>Bảo Linh chia sẻ về bí quyết học tập: “Em rất tâm đắc với câu nói: Thiên tài chỉ có một phần trăm là do năng khiếu, còn 99% là do khổ luyện. Khổ luyện chính là sự kiên trì mỗi ngày”.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                        <div class="stats">
+                            <span><strong id="works-linh">0</strong> Works</span>
+                            <span><strong>12</strong> Exhibitions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-gallery" id="gallery-linh"></div>
+            </div>
+            
+            <!-- NGUYỄN HỒNG DƯƠNG -->
+            <div class="artist-bio" data-artist="duong">
+                <div class="profile-container">
+                    <img src="Duong/davatar.jpg" alt="Nguyễn Hồng Dương" class="profile-img">
+                    <div class="profile-text">
+                        <h2>NGUYỄN HỒNG DƯƠNG</h2>
+                        <p class="specialty" style="font-weight: bold;">Lớp 9A, Liên đội TH&THCS Minh Long (thị xã Chơn Thành)</p>
+                        <p>Đạt nhiểu thành tích tại các cuộc thi Khoa học kĩ thuật, sáng tạo thanh thiếu niên nhi đồng và trong công tác Đội.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                        <div class="stats">
+                            <span><strong id="works-duong">0</strong> Works</span>
+                            <span><strong>9</strong> Exhibitions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-gallery" id="gallery-duong"></div>
+            </div>
+            
+            <!-- NGUYỄN NGÂN KHÁNH -->
+            <div class="artist-bio" data-artist="khanh">
+                <div class="profile-container">
+                    <img src="Khanh/kavatar.jpg" alt="Nguyễn Ngân Khánh" class="profile-img">
+                    <div class="profile-text">
+                        <h2>NGUYỄN NGÂN KHÁNH</h2>
+                        <p class="specialty" style="font-weight: bold;">Lớp 9A1, Liên đội PTDTNT THCS Lộc Ninh (huyện Lộc Ninh)</p>
+                        <p>Please update your profile</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                        <div class="stats">
+                            <span><strong id="works-khanh">0</strong> Works</span>
+                            <span><strong>7</strong> Exhibitions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-gallery" id="gallery-khanh"></div>
+            </div>
+            
+            <!-- TRỊNH NGỌC DUY ANH -->
+            <div class="artist-bio" data-artist="duyanh">
+                <div class="profile-container">
+                    <img src="Anh/aavatar.jpg" alt="Trịnh Ngọc Duy Anh" class="profile-img">
+                    <div class="profile-text">
+                        <h2>TRỊNH NGỌC DUY ANH</h2>
+                        <p class="specialty" style="font-weight: bold;">Trịnh Ngọc Duy Anh, lớp 7A1, Liên đội THCS Tân Tiến (huyện Đồng Phú)</p>
+                        <p>Please update your profile</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                        <div class="stats">
+                            <span><strong id="works-duyanh">0</strong> Works</span>
+                            <span><strong>5</strong> Exhibitions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-gallery" id="gallery-duyanh"></div>
+            </div>
+            
+            <!-- PHẠM THỊ BẢO NGỌC -->
+            <div class="artist-bio" data-artist="baongoc">
+                <div class="profile-container">
+                    <img src="Ngoc/navatar.jpg" alt="Phạm Thị Bảo Ngọc" class="profile-img">
+                    <div class="profile-text">
+                        <h2>PHẠM THỊ BẢO NGỌC</h2>
+                        <p class="specialty" style="font-weight: bold;">Lớp 7/9, Liên đội THCS Tân Xuân (thành phố Đồng Xoài)</p>
+                        <p>Please update your profile</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                        <div class="stats">
+                            <span><strong id="works-baongoc">0</strong> Works</span>
+                            <span><strong>8</strong> Exhibitions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-gallery" id="gallery-baongoc"></div>
+            </div>
+            
+            <!-- VŨ ĐỖ TÙNG VÂN -->
+            <div class="artist-bio" data-artist="tungvan">
+                <div class="profile-container">
+                    <img src="Van/vavata.jpg" alt="Vũ Đỗ Tùng Vân" class="profile-img">
+                    <div class="profile-text">
+                        <h2>VŨ ĐỖ TÙNG VÂN</h2>
+                        <p class="specialty" style="font-weight: bold;">Lớp 7/2, Liên đội THCS Tân Phú (thành phố Đồng Xoài)</p>
+                        <p>Please update your profile</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                        <div class="stats">
+                            <span><strong id="works-tungvan">0</strong> Works</span>
+                            <span><strong>6</strong> Exhibitions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-gallery" id="gallery-tungvan"></div>
+            </div>
+            
+            <!-- LÊ NGỌC HÂN -->
+            <div class="artist-bio" data-artist="ngochan">
+                <div class="profile-container">
+                    <img src="Han/havatar.jpg" alt="Lê Ngọc Hân" class="profile-img">
+                    <div class="profile-text">
+                        <h2>LÊ NGỌC HÂN</h2>
+                        <p class="specialty" style="font-weight: bold;">Lớp 5/2, Liên đội Tiểu học An Lộc B (thị xã Bình Long).</p>
+                        <p>Please update your profile</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                        </div>
+                        <div class="stats">
+                            <span><strong id="works-ngochan">0</strong> Works</span>
+                            <span><strong>10</strong> Exhibitions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-gallery" id="gallery-ngochan"></div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container gallery">
+        <!-- Gallery items will be added by JavaScript -->
+    </main>
+
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <button class="download-btn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+            </button>
+            <span class="close-btn">&times;</span>
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-img-container">
+                <img class="lightbox-img" src="" alt="">
+            </div>
+            <div class="caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Artistic Vision Gallery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
